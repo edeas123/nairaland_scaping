@@ -20,7 +20,9 @@ The data extraction pipeline was developed to aggregate data e.g. number of imag
         user - username of post writer
     }
 
-An example:
+## sample:
+
+A sample of the extracted data can be downloaded [here](https://drive.google.com/file/d/0BzHqdm9lYwfwbGFqTWlMV0xiNnc/view?usp=sharing). A line looks like this:
 
     {
       "posted": "6:19am, Jul 05", 
@@ -37,7 +39,7 @@ An example:
       "likes": 0
      }
 
-The data is deliberately left preprocessed to some extent for speed in parsing as well as to give the user some data cleaning experience.
+The data is deliberately left unprocessed to some extent for speed in parsing as well as to give the user some data cleaning experience.
 
 ## possible analysis
 
