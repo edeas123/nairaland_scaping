@@ -16,7 +16,8 @@ class MainSpider(scrapy.Spider):
     def parse(self, response):
         """parse the nairaland root page
         yields the top level forums for parsing"""
-        root = ["nairaland"]#, "entertainment", "science"] # top level forumns
+        
+        root = ["nairaland", "entertainment", "science"] # top level forumns
         for r in root:
             next_page = "/{0}".format(r)
             yield response.follow(next_page, self.parse_main)
@@ -26,11 +27,13 @@ class MainSpider(scrapy.Spider):
         """ parse the root nairaland pages e.g nairaland, entertainment
         science"""
         
-        forum = ["politics", "business"]
-        for f in forum:
-            next_page = "/{0}".format(f)
+        # parse top level forums
+        forums = response.xpath("//body//table[2]//td//a/@href").extract()
+        
+        for f in forums:
+            next_page = "{0}".format(f)
             request = response.follow(next_page, self.parse_forum)
-            request.meta["forum"] = f
+            request.meta["forum"] = f[1:]
 
             yield request
 
