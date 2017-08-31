@@ -3,10 +3,11 @@ Web scraper for popular nigerian website (nairaland.com) to JSON Lines formatted
 
 # run
 
-To run on your own, use:
+To run on your own, you need scrapy [https://scrapy.org/](https://scrapy.org/), then use:
 
     scrapy crawl nairaland -o nairaland.jl --logfile nairaland.log --loglevel INFO
-    
+
+
 ## extracted data
 
 The data extraction pipeline was developed to aggregate data e.g. number of images in a post, number of links etc rather than extracting full text from the website. The format of the extracted data is:
