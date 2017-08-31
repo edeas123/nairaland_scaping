@@ -14,7 +14,7 @@ The data extraction pipeline was developed to aggregate data e.g. number of imag
 
     {
         _id - unique id of post/comment
-        retrieved - timestamp of article scrapping
+        retrieved - timestamp of article scraping
         article_id - unique article id
         forum - article forum (e.g. politics, business)
         links - number of links in comment/post
