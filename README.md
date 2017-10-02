@@ -1,4 +1,4 @@
-# nairaland_scaping
+# nairaland_scraping
 Web scraper for popular nigerian website (nairaland.com) to JSON Lines formatted text file. 
 
 # run
